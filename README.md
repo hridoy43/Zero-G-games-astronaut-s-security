@@ -1,4 +1,4 @@
-# Zero G Drill Game and Astronaut Security
+# Zero-G Drill Game and Astronaut Security
 
 The Name of our project is Zero G Drill Game and Astronaut Security.
 We are making Drill games for the Astronauts..
