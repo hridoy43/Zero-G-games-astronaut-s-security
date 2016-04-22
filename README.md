@@ -1,6 +1,6 @@
 # Zero-G Drill Game and Astronaut Security
 
-The Name of our project is Zero G Drill Game and Astronaut Security.
+The Name of our project is Zero G Drill Game and Astronaut's Security.
 We are making Drill games for the Astronauts..
 Here we using drill type games here because,
 this drill will teach them to operate smoothly in tense situation and it will help them for recreation as well.
