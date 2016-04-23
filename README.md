@@ -1,5 +1,6 @@
 # Zero-G Drill Game and Astronaut Security
 
+About the project:
 The Name of our project is Zero G Drill Game and Astronaut's Security.
 We are making Drill games for the Astronauts..
 Here we using drill type games here because,
@@ -13,3 +14,11 @@ The astronauts will be tagged with Radio Tagging frequency tracker to mark their
 If the astronauts gets drift away from   the ranged area....
 The the alarm will be triggered automatically and it will activate the Electromagnetic field and pull the astronauts inside the inside the safe zone again.
 In this way we can prevent the astronauts from drifting away....
+
+
+Links: >>
+
+Youtube:
+
+g-Drive(Hardware implementation): 
+https://drive.google.com/folderview?id=0B4-CcssgYmGMOHdBR2otLUdlYjg&usp=drive_web
