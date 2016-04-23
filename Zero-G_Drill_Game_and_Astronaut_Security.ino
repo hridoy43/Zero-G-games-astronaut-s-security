@@ -24,6 +24,8 @@ void setup() {
   
   pinMode(pirPin2, INPUT);
   pinMode(pirSupply2,OUTPUT);
+
+  digitalWrite(Alarm,LOW);
   
   Serial.begin(9600); // Open serial monitor at 115200 baud to see ping results.
 }
@@ -31,7 +33,7 @@ void setup() {
 void loop() {
      digitalWrite(pirSupply1,HIGH);
      digitalWrite(pirSupply2,HIGH);
-     digitalWrite(Alarm,LOW);
+     
      
   
   delay(50);                          // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
@@ -63,6 +65,12 @@ void loop() {
     else{
       digitalWrite(led,LOW);
     digitalWrite(Alarm,LOW);
+    }
+
+    if(digitalWrite(Alarm,HIGH))
+    {
+      delay(50000);
+      digitalWrite(Alarm,LOW);
     }
   
   delay(1000);
