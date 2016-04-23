@@ -41,6 +41,7 @@ void loop() {
     pinMode(Alarm,HIGH);
     Serial.print("Artronaut is drifting away from the sequred area");
     Serial.println(" ");
+    pinMode(Alarm,HIGH);
     }
   else {
     pinMode(led,LOW);
@@ -54,6 +55,7 @@ void loop() {
      
      Serial.print("Object detected in laser box");
      Serial.println(" ");
+     pinMode(Alarm,HIGH);
      digitalWrite(pirSupply1,LOW);
      digitalWrite(pirSupply2,LOW);
     }
