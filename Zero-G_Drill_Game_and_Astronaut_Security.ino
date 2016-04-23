@@ -43,7 +43,7 @@ void loop() {
   unsigned int uS = sonar.ping_cm(); // Send ping, get ping time in centemeter (uS).
   delay(100);
   
-  if(uS >= 35){          //For Outside Game
+  if(uS >= 35 && uS <= 50){          //For Outside Game
     digitalWrite(led,HIGH);
     digitalWrite(Alarm,HIGH);
     Serial.print("Artronaut is drifting away from the sequred area");
