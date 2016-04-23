@@ -45,8 +45,8 @@ void loop() {
     Serial.println(" ");
     }
   else {
-    pinMode(led,LOW);
-    pinMode(Alarm,HIGH);
+    digitalWrite(led,LOW);
+    digitalWrite(Alarm,HIGH);
   }
   
   delay(100);
@@ -56,7 +56,7 @@ void loop() {
      
      Serial.print("Object detected in laser box");
      Serial.println(" ");
-     pinMode(Alarm,HIGH);
+     digitalWrite(Alarm,HIGH);
      digitalWrite(pirSupply1,LOW);
      digitalWrite(pirSupply2,LOW);
     }
