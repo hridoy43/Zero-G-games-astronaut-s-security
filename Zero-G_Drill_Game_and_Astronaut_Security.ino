@@ -39,8 +39,8 @@ void loop() {
   delay(100);
   
   if(uS >= 35){          //For Outside Game
-    pinMode(led,HIGH);
-    pinMode(Alarm,HIGH);
+    digitalWrite(led,HIGH);
+    digitalWrite(Alarm,HIGH);
     Serial.print("Artronaut is drifting away from the sequred area");
     Serial.println(" ");
     }
