@@ -46,7 +46,7 @@ void loop() {
     }
   else {
     digitalWrite(led,LOW);
-    digitalWrite(Alarm,HIGH);
+    digitalWrite(Alarm,LOW);
   }
   
   delay(100);
@@ -59,6 +59,10 @@ void loop() {
      digitalWrite(Alarm,HIGH);
      digitalWrite(pirSupply1,LOW);
      digitalWrite(pirSupply2,LOW);
+    }
+    else{
+      digitalWrite(led,LOW);
+    digitalWrite(Alarm,LOW);
     }
   
   delay(1000);
