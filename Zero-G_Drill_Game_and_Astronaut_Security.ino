@@ -49,7 +49,7 @@ void loop() {
   
   delay(100);
   
-  if ((digitalRead(pirPin1) == HIGH) || (digitalRead(pirPin2) == HIGH))  ////For Inside laser box Game
+  if ((digitalRead(pirPin1) == HIGH) || (digitalRead(pirPin2) == HIGH))  //For Inside laser box Game
     {
      
      Serial.print("Object detected in laser box");
