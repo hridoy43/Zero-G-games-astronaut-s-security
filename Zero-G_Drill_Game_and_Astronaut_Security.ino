@@ -16,8 +16,8 @@ int pirSupply2 = 9;
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
 
 void setup() {
-  pinMode(led,LOW);
-  pinMode(Alarm,LOW);
+  pinMode(led,OUTPUT);
+  pinMode(Alarm,OUTPUT);
   
   pinMode(pirPin1, INPUT);
   pinMode(pirSupply1,OUTPUT);
@@ -31,6 +31,8 @@ void setup() {
 void loop() {
      digitalWrite(pirSupply1,HIGH);
      digitalWrite(pirSupply2,HIGH);
+     digitalWrite(Alarm,LOW);
+     
   
   delay(50);                          // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
   unsigned int uS = sonar.ping_cm(); // Send ping, get ping time in centemeter (uS).
@@ -44,7 +46,7 @@ void loop() {
     }
   else {
     pinMode(led,LOW);
-    pinMode(Alarm,LOW);
+    pinMode(Alarm,HIGH);
   }
   
   delay(100);
@@ -54,7 +56,7 @@ void loop() {
      
      Serial.print("Object detected in laser box");
      Serial.println(" ");
-     pinMode(Alarm,LOW);
+     pinMode(Alarm,HIGH);
      digitalWrite(pirSupply1,LOW);
      digitalWrite(pirSupply2,LOW);
     }
