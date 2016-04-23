@@ -41,7 +41,6 @@ void loop() {
     pinMode(Alarm,HIGH);
     Serial.print("Artronaut is drifting away from the sequred area");
     Serial.println(" ");
-    pinMode(Alarm,HIGH);
     }
   else {
     pinMode(led,LOW);
@@ -50,12 +49,12 @@ void loop() {
   
   delay(100);
   
-  if ((digitalRead(pirPin1) == HIGH) || (digitalRead(pirPin2) == HIGH))  //For Inside laser box Game
+  if ((digitalRead(pirPin1) == HIGH) || (digitalRead(pirPin2) == HIGH))  ////For Inside laser box Game
     {
      
      Serial.print("Object detected in laser box");
      Serial.println(" ");
-     pinMode(Alarm,HIGH);
+     pinMode(Alarm,LOW);
      digitalWrite(pirSupply1,LOW);
      digitalWrite(pirSupply2,LOW);
     }
