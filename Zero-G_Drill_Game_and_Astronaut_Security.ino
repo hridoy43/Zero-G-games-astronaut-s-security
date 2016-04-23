@@ -13,6 +13,9 @@ int pirSupply1 = 7;
 int pirPin2 = 8;
 int pirSupply2 = 9;
 
+int soner_read = 0;
+int motion_read = 0; 
+
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
 
 void setup() {
@@ -45,6 +48,7 @@ void loop() {
     digitalWrite(Alarm,HIGH);
     Serial.print("Artronaut is drifting away from the sequred area");
     Serial.println(" ");
+    int soner_read = 1;
     }
   else {
     digitalWrite(led,LOW);
@@ -58,20 +62,24 @@ void loop() {
      
      Serial.print("Object detected in laser box");
      Serial.println(" ");
+     digitalWrite(led,HIGH);
      digitalWrite(Alarm,HIGH);
-     digitalWrite(pirSupply1,LOW);
-     digitalWrite(pirSupply2,LOW);
+     int motion_read = 1; 
+     
     }
     else{
+     digitalWrite(led,LOW);
+    digitalWrite(Alarm,LOW);
+    }
+
+    if((soner_read == 1) || (motion_read == 1))
+    {
+      delay(5000);
       digitalWrite(led,LOW);
     digitalWrite(Alarm,LOW);
     }
 
-    if(digitalWrite(Alarm,HIGH))
-    {
-      delay(50000);
-      digitalWrite(Alarm,LOW);
-    }
+    
   
   delay(1000);
 } 
